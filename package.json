@@ -1,0 +1,16 @@
+{
+  "name": "automation-tb",
+  "version": "1.0.0",
+  "description": "TechBazaar Automation Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [],
+  "author": "Tahreem",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^15.8.1",
+    "dotenv": "^17.2.3"
+  }
+}
