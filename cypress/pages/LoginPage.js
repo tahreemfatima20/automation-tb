@@ -1,11 +1,11 @@
 class LoginPage {
-  // Selectors
+  
   emailField = '#validationCustomEmail';
   continueButton = 'button.btn.btn-primary';
   passwordField = '#validationCustomPassword';
   loginButton = '.w-100.btn.btn-primary';
 
-  // Methods
+  
   enterEmail(email) {
     cy.get(this.emailField).should('be.visible').type(email);
   }
@@ -22,7 +22,7 @@ class LoginPage {
     cy.get(this.loginButton).should('be.enabled').click();
   }
 
-  // Full login flow
+
   login(email, password) {
     this.enterEmail(email);
     this.clickContinue();
@@ -31,5 +31,5 @@ class LoginPage {
   }
 }
 
-// Export the class (mandatory!)
+
 export default LoginPage;

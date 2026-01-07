@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('login', () => {
+  cy.request({
+    method: 'POST',
+    url: 'https://uat.api.techbazaar.pk/auth/login-seller', 
+    body: {
+      user_email: Cypress.env('email'),
+      password: Cypress.env('password'),
+    },
+  }).then((res) => {
+    const token = res.body.refreshToken;
+    cy.setCookie('stoken', token);
+    cy.log('Auth cookie set');
+  });
+});
+
+
