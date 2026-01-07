@@ -1,5 +1,5 @@
 
-import PurchaseOrderPage from '../pages/PurchaseOrderPage';
+import PurchaseOrderPage from '../pages/purchaseorderpage.js';
 
 const purchaseOrderPage = new PurchaseOrderPage();
 
